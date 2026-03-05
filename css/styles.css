@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas:
+        "main header header"
+        "main articulo1 aside"
+        "main articulo2 aside"
+        "main footer footer";
+
+
+    header {
+        grid-area: header;
+        background-color: #f1c40f;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    main {
+        grid-area: main;
+        background-color: #e67e22;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #articulo1 {
+        grid-area: articulo1;
+        background-color: #e74c3c;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #articulo2 {
+        grid-area: articulo2;
+        background-color: #9b59b6;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: #3498db;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: #2ecc71;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas:
+            "header header main"
+            "articulo1  articulo1 articulo1"
+            "articulo2 articulo2 articulo2"
+            "footer aside aside";
+    }
+
+    @media (max-width: 320px) {
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 15% 15% 15% 15% 20%;
+            grid-template-areas:
+                "header"
+                "main"
+                "articulo1"
+                "articulo2"
+                "aside"
+                "footer";
+        }
+    }
+
+
+}

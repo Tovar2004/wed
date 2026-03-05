@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    color: white;
+}
+
+#uno {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+#encabezado {
+    background-color: blue;
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grupodos {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+}
+
+#sub-tres {
+    background-color: rgb(75, 113, 195);
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#sub-dos {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#noticia1 {
+    background-color: rgb(196, 58, 13);
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#noticia2 {
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+
+#arriba1 {
+    background-color: rgb(133, 75, 84);
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#abajo1 {
+    background-color: rgb(61, 147, 78);
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#grupotres {
+    background-color: violet;
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#grupodos > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}

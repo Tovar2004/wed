@@ -1,0 +1,59 @@
+/* 
+p{
+    color: blue;
+    font-size: 40px;
+}
+
+.futbolista{
+    color: red;
+}
+
+#arquero{
+    color: green;
+}
+
+*{
+    font-size: 40px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    display: inline-block;
+
+} */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+li{
+    display: inline-block;
+}
+
+#prueba{
+    margin-top: 50px;
+    display: inline-block;
+    background-color: burlywood;
+    a{
+        font-size: 40px;
+        text-decoration: none;
+        margin: 0px 20px;
+        padding: 10px;
+        border: solid;
+        border-radius: 15px;
+        background-color: white;
+
+    }
+}
+/* p{
+    margin: 10px;
+    background-color: brown;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+
+} */

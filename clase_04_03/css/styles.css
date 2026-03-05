@@ -1,0 +1,56 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#uno{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#dos{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    position: absolute;
+    position: sticky;
+    position: fixed;
+    left: 50px;
+    top: 50px;
+}
+
+#tres{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+#contenedor{
+    display: flex;
+    justify-content: center;
+    border: solid red;
+    width: 500px;
+    height: 500px;
+}
+
+superior{
+    display: flex;
+    justify-content: center;
+    border: solid red;
+    width: 500px;
+    height: 500px;
+}
+inferior{
+    display: flex;
+    justify-content: center;
+    border: solid rgb(255, 0, 0);
+    width: 500px;
+    height: 700px;
+}
