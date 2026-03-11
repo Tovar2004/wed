@@ -23,6 +23,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #caja {
@@ -30,6 +31,13 @@ header {
     height: 20px;
     background-color: yellow;
     border: 2px solid red
+}
+
+#navegador {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: green;
 }
 
 nav {
