@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 500vh;
+}
+
+#text {
+    height: 200px;
+    width: 300px;
+    background-image: linear-gradient(to right, yellow,yellow, blue, red);
+    
+    /* transform: rotateZ(45deg);
+    transition: 2s, 1s;
+    &:hover {
+        transform: rotateZ(-180deg);
+        background-image: linear-gradient(to right, rgb(81, 255, 0), rgb(81, 255, 0), rgb(0, 255, 221), rgb(255, 225, 0));
+    } */
+
+}

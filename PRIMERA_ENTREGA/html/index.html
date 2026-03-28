@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXUS | Semillero de Investigación</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS (animaciones al hacer scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="bg-grid">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="nav-brand" href="#home">NEXUS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav gap-1 mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#sobre">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#eventos">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#equipos">Equipos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#resultados">Resultados</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#productos">Publicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-eyebrow animate__animated animate__fadeInLeft">Semillero de Investigación</div>
+                    <h1 class="hero-title animate__animated animate__fadeInLeft animate__delay-1s">
+                        Exploramos el<br />
+                        <span class="grad">futuro digital</span><br />
+                        juntos
+                    </h1>
+                    <p class="hero-description animate__animated animate__fadeInLeft animate__delay-2s">
+                        NEXUS es un semillero de investigación en Ingeniería de Sistemas, comprometido con la innovación
+                        tecnológica, el aprendizaje colaborativo y la generación de conocimiento de impacto.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="#sobre" class="btn btn-primary-custom">Conócenos <i
+                                class="fa-solid fa-arrow-right ms-1"></i></a>
+                        <a href="#eventos" class="btn btn-outline-custom">Ver Eventos</a>
+                    </div>
+                    <div class="hero-stats animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="stat-item">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Investigadores</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Proyectos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Publicaciones</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Años activos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual animate__animated animate__zoomIn animate__delay-1s">
+                        <div class="hero-blob"></div>
+                        <div class="hero-icon-grid">
+                            <div class="hero-icon-card c1"><i class="fa-solid fa-brain"></i>IA</div>
+                            <div class="hero-icon-card c2"><i class="fa-solid fa-network-wired"></i>Redes</div>
+                            <div class="hero-icon-card c3"><i class="fa-solid fa-shield-halved"></i>Seguridad</div>
+                            <div class="hero-icon-card c4"><i class="fa-solid fa-robot"></i>Robótica</div>
+                            <div class="hero-icon-card c2"><i class="fa-solid fa-database"></i>Big Data</div>
+                            <div class="hero-icon-card c1"><i class="fa-solid fa-code"></i>Dev</div>
+                            <div class="hero-icon-card c3"><i class="fa-solid fa-cloud"></i>Cloud</div>
+                            <div class="hero-icon-card c4"><i class="fa-solid fa-mobile-screen"></i>Mobile</div>
+                            <div class="hero-icon-card c2"><i class="fa-solid fa-chart-line"></i>Data</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SOBRE EL SEMILLERO ===================== -->
+    <section id="sobre">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Nuestra Historia</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Sobre el <span>Semillero</span>
+                    </h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Reseña histórica -->
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="about-info-box accent-purple" style="height:100%">
+                        <h4><i class="fa-solid fa-clock-rotate-left me-2" style="color:var(--color-primary)"></i>Reseña
+                            Histórica</h4>
+                        <p>
+                            NEXUS nació en 2022 como iniciativa de un grupo de estudiantes apasionados por la tecnología
+                            en la Universidad Pública Regional. Desde sus inicios, el semillero ha crecido hasta
+                            convertirse en un referente académico dentro de la facultad de Ingeniería de Sistemas. A lo
+                            largo de tres años, hemos participado en eventos nacionales, desarrollado proyectos de alto
+                            impacto y formado profesionales comprometidos con la innovación.
+                        </p>
+                    </div>
+                </div>
+                <!-- Misión -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-info-box accent-cyan">
+                        <h4><i class="fa-solid fa-bullseye me-2" style="color:var(--color-secondary)"></i>Misión</h4>
+                        <p>Fomentar la cultura investigativa en estudiantes de Ingeniería de Sistemas, mediante el
+                            desarrollo de proyectos tecnológicos que generen conocimiento útil para la comunidad.</p>
+                    </div>
+                </div>
+                <!-- Visión -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="about-info-box accent-yellow">
+                        <h4><i class="fa-solid fa-eye me-2" style="color:var(--color-accent)"></i>Visión</h4>
+                        <p>Ser un semillero reconocido a nivel regional por la calidad de sus investigaciones,
+                            posicionando a la universidad como polo de innovación tecnológica.</p>
+                    </div>
+                </div>
+                <!-- Objetivos -->
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-info-box accent-pink">
+                        <h4><i class="fa-solid fa-flag me-2" style="color:var(--color-pink)"></i>Objetivos</h4>
+                        <ul
+                            style="color:var(--color-muted); font-size:0.9rem; line-height:1.9; margin:0; padding-left:20px;">
+                            <li>Desarrollar proyectos de investigación en áreas de tecnología emergente.</li>
+                            <li>Participar en convocatorias nacionales e internacionales de investigación.</li>
+                            <li>Publicar artículos y ponencias en revistas y eventos académicos.</li>
+                            <li>Fortalecer competencias investigativas en los integrantes.</li>
+                            <li>Establecer alianzas con empresas e instituciones del sector tecnológico.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Líneas de investigación -->
+                <div class="col-12" data-aos="fade-up" data-aos-delay="250">
+                    <div class="about-info-box accent-purple">
+                        <h4><i class="fa-solid fa-flask me-2" style="color:var(--color-primary)"></i>Líneas de
+                            Investigación</h4>
+                        <div class="mt-3">
+                            <span class="linea-badge lb-1"><i class="fa-solid fa-brain"></i> Inteligencia
+                                Artificial</span>
+                            <span class="linea-badge lb-2"><i class="fa-solid fa-network-wired"></i> Redes y
+                                Seguridad</span>
+                            <span class="linea-badge lb-3"><i class="fa-solid fa-database"></i> Big Data &
+                                Analítica</span>
+                            <span class="linea-badge lb-4"><i class="fa-solid fa-mobile-screen"></i> Desarrollo de
+                                Software</span>
+                            <span class="linea-badge lb-1"><i class="fa-solid fa-cloud"></i> Computación en la
+                                Nube</span>
+                            <span class="linea-badge lb-2"><i class="fa-solid fa-robot"></i> IoT & Robótica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EVENTOS ===================== -->
+    <section id="eventos">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Agenda</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Eventos <span>Próximos</span>
+                    </h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Evento 1 -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up">
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-date-box">
+                                <div class="day">18</div>
+                                <div class="month">Abr</div>
+                            </div>
+                            <span class="badge-secondary">Taller</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h5>Taller de Machine Learning con Python</h5>
+                            <p>Aprende a construir modelos de aprendizaje automático desde cero con herramientas como
+                                Scikit-learn y TensorFlow.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-solid fa-location-dot"></i>Aula 301 – Bloque B</span>
+                                <span><i class="fa-solid fa-clock"></i>9:00 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evento 2 -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-date-box"
+                                style="background:linear-gradient(135deg,var(--color-pink),var(--color-accent))">
+                                <div class="day">05</div>
+                                <div class="month">May</div>
+                            </div>
+                            <span class="badge-pink">Conferencia</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h5>Conferencia: Ciberseguridad en la Empresa Moderna</h5>
+                            <p>Expertos del sector compartirán experiencias y estrategias para proteger infraestructuras
+                                digitales frente a amenazas actuales.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-solid fa-location-dot"></i>Auditorio Principal</span>
+                                <span><i class="fa-solid fa-clock"></i>2:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evento 3 -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <div class="event-card-header">
+                            <div class="event-date-box"
+                                style="background:linear-gradient(135deg,var(--color-accent),var(--color-secondary))">
+                                <div class="day">22</div>
+                                <div class="month">May</div>
+                            </div>
+                            <span class="badge-accent">Hackathon</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h5>NEXUS Hackathon 2026</h5>
+                            <p>48 horas de innovación no-stop. Equipos de toda la región compiten para resolver retos
+                                tecnológicos reales con impacto social.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-solid fa-location-dot"></i>Campus Universitario</span>
+                                <span><i class="fa-solid fa-clock"></i>8:00 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evento pasado 1 -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="50">
+                    <div class="event-card" style="opacity:0.65">
+                        <div class="event-card-header">
+                            <div class="event-date-box" style="background:#2a2a45">
+                                <div class="day">10</div>
+                                <div class="month">Mar</div>
+                            </div>
+                            <span class="badge-primary">Pasado</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h5>Seminario de Inteligencia Artificial</h5>
+                            <p>Introducción a los modelos de lenguaje y su aplicación en proyectos universitarios con
+                                demos en vivo.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-solid fa-location-dot"></i>Lab de Sistemas</span>
+                                <span><i class="fa-solid fa-clock"></i>10:00 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evento pasado 2 -->
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="event-card" style="opacity:0.65">
+                        <div class="event-card-header">
+                            <div class="event-date-box" style="background:#2a2a45">
+                                <div class="day">20</div>
+                                <div class="month">Feb</div>
+                            </div>
+                            <span class="badge-primary">Pasado</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h5>Workshop de Desarrollo Web Moderno</h5>
+                            <p>Sesión práctica sobre HTML5, CSS3, JavaScript y frameworks modernos orientada a
+                                estudiantes de primeros semestres.</p>
+                            <div class="event-meta">
+                                <span><i class="fa-solid fa-location-dot"></i>Sala de Cómputo 2</span>
+                                <span><i class="fa-solid fa-clock"></i>2:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EQUIPOS ===================== -->
+    <section id="equipos">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Nuestro equipo</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Equipos de <span>Trabajo</span>
+                    </h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Equipo 1 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-icon ti-1"><i class="fa-solid fa-brain"></i></div>
+                            <div>
+                                <h4>Equipo IA & Machine Learning</h4>
+                                <span class="badge-primary">4 integrantes</span>
+                            </div>
+                        </div>
+                        <p>Investigan y desarrollan soluciones basadas en inteligencia artificial, procesamiento de
+                            lenguaje natural y visión por computador.</p>
+                        <div class="members-list">
+                            <div class="member-row">
+                                <div class="member-avatar">LC</div>
+                                <div class="member-info">
+                                    <div class="member-name">Laura Castillo</div>
+                                    <div class="member-role">Líder de Equipo</div>
+                                </div>
+                                <span class="badge-primary">Líder</span>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar">JM</div>
+                                <div class="member-info">
+                                    <div class="member-name">Juan Morales</div>
+                                    <div class="member-role">Investigador</div>
+                                </div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar">SR</div>
+                                <div class="member-info">
+                                    <div class="member-name">Sofía Ríos</div>
+                                    <div class="member-role">Investigadora</div>
+                                </div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar">CP</div>
+                                <div class="member-info">
+                                    <div class="member-name">Carlos Peña</div>
+                                    <div class="member-role">Auxiliar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Equipo 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-icon ti-2"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h4>Equipo Ciberseguridad</h4>
+                                <span class="badge-secondary">3 integrantes</span>
+                            </div>
+                        </div>
+                        <p>Analizan vulnerabilidades, desarrollan herramientas de protección y forman en buenas
+                            prácticas de seguridad informática.</p>
+                        <div class="members-list">
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-secondary),var(--color-pink))">
+                                    AN</div>
+                                <div class="member-info">
+                                    <div class="member-name">Andrés Navarro</div>
+                                    <div class="member-role">Líder de Equipo</div>
+                                </div>
+                                <span class="badge-secondary">Líder</span>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-secondary),var(--color-pink))">
+                                    VG</div>
+                                <div class="member-info">
+                                    <div class="member-name">Valentina Gómez</div>
+                                    <div class="member-role">Investigadora</div>
+                                </div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-secondary),var(--color-pink))">
+                                    DL</div>
+                                <div class="member-info">
+                                    <div class="member-name">Diego López</div>
+                                    <div class="member-role">Auxiliar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-icon ti-3"><i class="fa-solid fa-database"></i></div>
+                            <div>
+                                <h4>Equipo Big Data & Cloud</h4>
+                                <span class="badge-accent">3 integrantes</span>
+                            </div>
+                        </div>
+                        <p>Trabajan en el análisis masivo de datos, pipelines de procesamiento y despliegue de
+                            soluciones en entornos cloud.</p>
+                        <div class="members-list">
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-accent),#f97316)">MF</div>
+                                <div class="member-info">
+                                    <div class="member-name">Mariana Flores</div>
+                                    <div class="member-role">Líder de Equipo</div>
+                                </div>
+                                <span class="badge-accent">Líder</span>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-accent),#f97316)">RT</div>
+                                <div class="member-info">
+                                    <div class="member-name">Ricardo Torres</div>
+                                    <div class="member-role">Investigador</div>
+                                </div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-accent),#f97316)">NA</div>
+                                <div class="member-info">
+                                    <div class="member-name">Natalia Arenas</div>
+                                    <div class="member-role">Auxiliar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Equipo 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <div class="team-header">
+                            <div class="team-icon ti-4"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <div>
+                                <h4>Equipo Desarrollo de Software</h4>
+                                <span class="badge-pink">3 integrantes</span>
+                            </div>
+                        </div>
+                        <p>Diseñan y desarrollan aplicaciones web y móviles, aplicando metodologías ágiles y buenas
+                            prácticas de ingeniería de software.</p>
+                        <div class="members-list">
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-pink),var(--color-primary))">PS
+                                </div>
+                                <div class="member-info">
+                                    <div class="member-name">Paula Sánchez</div>
+                                    <div class="member-role">Líder de Equipo</div>
+                                </div>
+                                <span class="badge-pink">Líder</span>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-pink),var(--color-primary))">EV
+                                </div>
+                                <div class="member-info">
+                                    <div class="member-name">Esteban Vargas</div>
+                                    <div class="member-role">Investigador</div>
+                                </div>
+                            </div>
+                            <div class="member-row">
+                                <div class="member-avatar"
+                                    style="background:linear-gradient(135deg,var(--color-pink),var(--color-primary))">IC
+                                </div>
+                                <div class="member-info">
+                                    <div class="member-name">Isabella Córdoba</div>
+                                    <div class="member-role">Auxiliar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== RESULTADOS ===================== -->
+    <section id="resultados">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Logros</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Resultados de
+                        <span>Investigación</span></h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-3" data-aos="fade-up">
+                    <div class="result-card rc1">
+                        <div class="result-icon" style="color:var(--color-primary)"><i class="fa-solid fa-brain"></i>
+                        </div>
+                        <span class="badge-primary mb-3 d-inline-block">IA</span>
+                        <h4>Detector de Phishing con NLP</h4>
+                        <p>Modelo de aprendizaje automático capaz de detectar correos de phishing con un 94% de
+                            precisión utilizando BERT en español.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small style="color:var(--color-muted)">2025</small>
+                            <span style="color:var(--color-primary);font-size:0.8rem;font-weight:700">Ver más →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="result-card rc2">
+                        <div class="result-icon" style="color:var(--color-secondary)"><i
+                                class="fa-solid fa-network-wired"></i></div>
+                        <span class="badge-secondary mb-3 d-inline-block">Redes</span>
+                        <h4>Sistema de Monitoreo de Redes IoT</h4>
+                        <p>Plataforma en tiempo real para supervisar dispositivos IoT en entornos universitarios, con
+                            alertas automáticas ante anomalías.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small style="color:var(--color-muted)">2024</small>
+                            <span style="color:var(--color-secondary);font-size:0.8rem;font-weight:700">Ver más →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="result-card rc3">
+                        <div class="result-icon" style="color:var(--color-accent)"><i class="fa-solid fa-chart-bar"></i>
+                        </div>
+                        <span class="badge-accent mb-3 d-inline-block">Data</span>
+                        <h4>Dashboard de Analítica Académica</h4>
+                        <p>Herramienta de visualización de datos académicos que permite identificar patrones de
+                            deserción estudiantil en tiempo real.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small style="color:var(--color-muted)">2024</small>
+                            <span style="color:var(--color-accent);font-size:0.8rem;font-weight:700">Ver más →</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="result-card rc4">
+                        <div class="result-icon" style="color:var(--color-pink)"><i
+                                class="fa-solid fa-mobile-screen"></i></div>
+                        <span class="badge-pink mb-3 d-inline-block">App</span>
+                        <h4>App de Gestión Semillero</h4>
+                        <p>Aplicación móvil multiplataforma para gestionar proyectos, tareas y comunicación interna del
+                            semillero con notificaciones push.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small style="color:var(--color-muted)">2023</small>
+                            <span style="color:var(--color-pink);font-size:0.8rem;font-weight:700">Ver más →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PRODUCTOS ACADÉMICOS ===================== -->
+    <section id="productos">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Publicaciones</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Productos
+                        <span>Académicos</span></h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Libros -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <h5
+                        style="font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-primary);margin-bottom:20px;">
+                        <i class="fa-solid fa-book me-2"></i>Libros
+                    </h5>
+                    <div class="product-item">
+                        <div class="product-type-icon pt-book"><i class="fa-solid fa-book"></i></div>
+                        <div class="product-info">
+                            <h5>Introducción a la IA para Ingenieros</h5>
+                            <div class="authors">Castillo, L. · Morales, J. · 2025</div>
+                        </div>
+                        <a href="#" class="product-download"><i class="fa-solid fa-download"></i> PDF</a>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-type-icon pt-book"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="product-info">
+                            <h5>Seguridad en Redes Modernas</h5>
+                            <div class="authors">Navarro, A. · Gómez, V. · 2024</div>
+                        </div>
+                        <a href="#" class="product-download"><i class="fa-solid fa-download"></i> PDF</a>
+                    </div>
+                </div>
+                <!-- Artículos -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5
+                        style="font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-secondary);margin-bottom:20px;">
+                        <i class="fa-solid fa-newspaper me-2"></i>Artículos
+                    </h5>
+                    <div class="product-item">
+                        <div class="product-type-icon pt-article"><i class="fa-solid fa-newspaper"></i></div>
+                        <div class="product-info">
+                            <h5>Phishing Detection using BERT-based NLP</h5>
+                            <div class="authors">Castillo, L. · Peña, C. · 2025</div>
+                        </div>
+                        <a href="#" class="product-download"><i class="fa-solid fa-link"></i> Ver</a>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-type-icon pt-article"><i class="fa-solid fa-newspaper"></i></div>
+                        <div class="product-info">
+                            <h5>IoT Anomaly Detection in University Networks</h5>
+                            <div class="authors">Navarro, A. · López, D. · 2024</div>
+                        </div>
+                        <a href="#" class="product-download"><i class="fa-solid fa-link"></i> Ver</a>
+                    </div>
+                </div>
+                <!-- Ponencias -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <h5
+                        style="font-size:0.8rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:20px;">
+                        <i class="fa-solid fa-microphone-lines me-2"></i>Ponencias e Informes
+                    </h5>
+                    <div class="product-item">
+                        <div class="product-type-icon pt-report"><i class="fa-solid fa-file-lines"></i></div>
+                        <div class="product-info">
+                            <h5>Informe Anual NEXUS 2024</h5>
+                            <div class="authors">Equipo NEXUS · 2024</div>
+                        </div>
+                        <a href="#" class="product-download"><i class="fa-solid fa-download"></i> PDF</a>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-type-icon pt-report"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <div class="product-info">
+                            <h5>Ponencia CIIS 2024: Big Data Académico</h5>
+                            <div class="authors">Flores, M. · Torres, R. · 2024</div>
+                        </div>
+                        <a href="#" class="product-download"><i class="fa-solid fa-download"></i> PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section id="galeria">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Momentos</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Galería de
+                        <span>Imágenes</span></h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="gallery-grid" data-aos="fade-up">
+                <a class="gallery-item glightbox" href="https://picsum.photos/seed/nexus1/900/600" data-gallery="nexus">
+                    <img src="https://picsum.photos/seed/nexus1/900/600" alt="Evento NEXUS" loading="lazy" />
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </a>
+                <a class="gallery-item glightbox" href="https://picsum.photos/seed/nexus2/600/400" data-gallery="nexus">
+                    <img src="https://picsum.photos/seed/nexus2/600/400" alt="Taller NEXUS" loading="lazy" />
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </a>
+                <a class="gallery-item glightbox" href="https://picsum.photos/seed/nexus3/600/400" data-gallery="nexus">
+                    <img src="https://picsum.photos/seed/nexus3/600/400" alt="Equipo NEXUS" loading="lazy" />
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </a>
+                <a class="gallery-item glightbox" href="https://picsum.photos/seed/nexus4/600/400" data-gallery="nexus">
+                    <img src="https://picsum.photos/seed/nexus4/600/400" alt="Hackathon NEXUS" loading="lazy" />
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </a>
+                <a class="gallery-item glightbox" href="https://picsum.photos/seed/nexus5/600/400" data-gallery="nexus">
+                    <img src="https://picsum.photos/seed/nexus5/600/400" alt="Conferencia NEXUS" loading="lazy" />
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </a>
+                <a class="gallery-item glightbox" href="https://picsum.photos/seed/nexus6/600/400" data-gallery="nexus">
+                    <img src="https://picsum.photos/seed/nexus6/600/400" alt="Premiación NEXUS" loading="lazy" />
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contacto">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span class="section-label" data-aos="fade-right">Escríbenos</span>
+                    <h2 class="section-title" data-aos="fade-right" data-aos-delay="100">Contáctanos</h2>
+                    <div class="divider" data-aos="fade-right" data-aos-delay="150"></div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <!-- Formulario -->
+                <div class="col-lg-7" data-aos="fade-up">
+                    <div class="contact-form-wrap">
+                        <h4 class="mb-4" style="font-size:1.2rem">Envíanos un mensaje</h4>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label-custom">Nombre</label>
+                                <input type="text" id="inp-nombre" class="form-control form-control-dark"
+                                    placeholder="Tu nombre completo" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label-custom">Correo electrónico</label>
+                                <input type="email" id="inp-correo" class="form-control form-control-dark"
+                                    placeholder="tu@correo.com" />
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Asunto</label>
+                                <input type="text" id="inp-asunto" class="form-control form-control-dark"
+                                    placeholder="¿De qué trata tu mensaje?" />
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom">Mensaje</label>
+                                <textarea id="inp-mensaje" class="form-control form-control-dark" rows="5"
+                                    placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary-custom w-100" id="btnEnviar">
+                                    <i class="fa-solid fa-paper-plane me-2"></i>Enviar Mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Info de contacto -->
+                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon ci-1"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-info-text">
+                            <h6>Correo Institucional</h6>
+                            <p>nexus@universidad.edu.co</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon ci-2"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-info-text">
+                            <h6>Ubicación</h6>
+                            <p>Bloque de Ingeniería, Oficina 204<br />Universidad Pública Regional — Pitalito, Huila</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon ci-3"><i class="fa-solid fa-calendar-days"></i></div>
+                        <div class="contact-info-text">
+                            <h6>Horario de atención</h6>
+                            <p>Lunes a viernes: 8:00 AM – 5:00 PM</p>
+                        </div>
+                    </div>
+                    <!-- Redes sociales -->
+                    <div class="mt-4">
+                        <p
+                            style="font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:14px;">
+                            Síguenos</p>
+                        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-link" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="footer-brand">NEXUS</div>
+                    <p class="footer-copy">Semillero de Investigación en Ingeniería de Sistemas<br />© 2026 NEXUS. Todos
+                        los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#home" class="footer-copy text-decoration-none" style="margin-right:16px">Inicio</a>
+                    <a href="#sobre" class="footer-copy text-decoration-none" style="margin-right:16px">Nosotros</a>
+                    <a href="#contacto" class="footer-copy text-decoration-none">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button id="scrollTop" aria-label="Volver arriba"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- Toast notificación -->
+    <div class="toast-custom" id="toast">
+        <i class="fa-solid fa-circle-check me-2" style="color:var(--color-secondary)"></i>
+        ¡Mensaje enviado con éxito! Te contactaremos pronto.
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
