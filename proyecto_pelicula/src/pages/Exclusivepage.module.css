@@ -1,0 +1,54 @@
+/* ─── Lang selector ─────────────────────────────────────────── */
+.langGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.langLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-right: 2px;
+  white-space: nowrap;
+}
+
+.langBtn {
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.langBtn:hover {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.langActive {
+  background: #e50914 !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+/* ─── Grid ──────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.75rem; }
+}

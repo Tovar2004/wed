@@ -1,0 +1,186 @@
+/* ─── Page ───────────────────────────────────────────────── */
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ─── Fondo backdrop ─────────────────────────────────────── */
+.bgBackdrop {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px) brightness(0.3);
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.bgOverlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,16,0.6) 0%, rgba(8,8,16,0.95) 100%);
+  z-index: 1;
+}
+
+/* ─── Inner ──────────────────────────────────────────────── */
+.inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.back {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+.back:hover { color: var(--text-primary); }
+
+.titleText {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── TV controls ────────────────────────────────────────── */
+.tvControls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.selectorGroup { display: flex; align-items: center; gap: 1rem; }
+
+.selectorLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  min-width: 80px;
+}
+
+.selectorScroll {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-surface) transparent;
+}
+.selectorScroll::-webkit-scrollbar { height: 3px; }
+.selectorScroll::-webkit-scrollbar-thumb { background: var(--bg-surface); border-radius: 2px; }
+
+.selectorBtn {
+  min-width: 36px;
+  height: 32px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-glass);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+.selectorBtn:hover { background: var(--bg-glass-hover); color: var(--text-primary); }
+.selectorActive {
+  background: var(--accent-red) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+/* ─── Server bar ─────────────────────────────────────────── */
+.serverBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 0.9rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.imdbNote {
+  font-size: 0.78rem;
+  color: var(--accent-gold);
+  background: rgba(245,200,66,0.1);
+  border: 1px solid rgba(245,200,66,0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Player ─────────────────────────────────────────────── */
+.playerShell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.loadingState, .errorState {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.loadingSpinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border-subtle);
+  border-top-color: var(--accent-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.errorState span { font-size: 2rem; color: var(--accent-red); }
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .inner { padding: 1rem 1rem 2rem; }
+  .header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .selectorGroup { flex-direction: column; align-items: flex-start; }
+}

@@ -1,0 +1,176 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  cursor: pointer;
+  animation: fadeInUp 0.4s ease both;
+  width: 100%;
+}
+
+.card:hover .posterImg { transform: scale(1.06); }
+.card:hover .title     { color: var(--accent-red); }
+
+/* ─── Poster ───────────────────────────────────────── */
+.poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .poster {
+  box-shadow: 0 14px 40px rgba(0,0,0,0.75), 0 0 0 1px rgba(232,23,58,0.3);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.posterImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.posterFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+}
+
+.posterFallback span {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+/* ─── Iframe preview ───────────────────────────────── */
+.iframePreview {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  animation: fadeIn 0.3s ease;
+}
+
+.iframePreview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  /* escala el player para que quepa en formato 2/3 mostrando solo el centro */
+  transform: scale(1.6);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+/* Capa encima del iframe para evitar que el mouse "entre" al iframe
+   y dispare el mouseLeave de la card */
+.iframeBlocker {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: transparent;
+}
+
+/* ─── Overlay play ─────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.25) 50%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.card:hover .overlay { opacity: 1; }
+
+.playBtn {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding-left: 3px;
+  color: #fff;
+  box-shadow: 0 0 28px rgba(232,23,58,0.7);
+  transition: transform 0.2s ease;
+}
+
+.card:hover .playBtn { transform: scale(1.12); }
+
+/* ─── Badges ───────────────────────────────────────── */
+.rating {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--text-primary);
+  z-index: 5;
+}
+
+.star { color: var(--accent-gold); }
+
+.typeBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--accent-red);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+/* ─── Info ─────────────────────────────────────────── */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 2px;
+}
+
+.title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+.genre {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

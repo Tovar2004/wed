@@ -1,0 +1,294 @@
+/* ─── Wrapper posicional ─────────────────────────────────────────── */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  transition: z-index 0s 0s;
+}
+
+.wrapper.expanded {
+  z-index: 50;
+}
+
+/* ─── Card base ──────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.card:hover .title { color: var(--accent-red); }
+
+/* ─── Poster ─────────────────────────────────────────────────────── */
+.poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.wrapper.expanded .poster {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.posterImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.wrapper:hover:not(.expanded) .posterImg { transform: scale(1.05); }
+
+.posterFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+}
+
+.posterFallback span {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+/* ─── Overlay play ───────────────────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.wrapper:hover .overlay { opacity: 1; }
+
+.playBtn {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding-left: 3px;
+  color: #fff;
+  box-shadow: 0 0 24px rgba(232,23,58,0.7);
+  transition: transform 0.2s ease;
+}
+
+.wrapper:hover .playBtn { transform: scale(1.1); }
+
+/* ─── Badges ─────────────────────────────────────────────────────── */
+.rating {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.82);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--text-primary);
+  z-index: 5;
+}
+
+.star { color: var(--accent-gold); }
+
+.typeBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--accent-red);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+/* ─── Info base ──────────────────────────────────────────────────── */
+.info {
+  padding: 0 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.year {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* ─── Panel expandido ────────────────────────────────────────────── */
+.expandPanel {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;   /* era 260px */
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow:
+    0 -8px 40px rgba(0,0,0,0.8),
+    0 24px 60px rgba(0,0,0,0.85),
+    0 0 0 1px rgba(232,23,58,0.2);
+  overflow: hidden;
+  animation: expandCard 0.3s cubic-bezier(0.34,1.56,0.64,1) both;
+  z-index: 10;
+}
+
+@keyframes expandCard {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.88) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+}
+
+/* ─── Preview area ───────────────────────────────────────────────── */
+.previewArea {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #000;
+  overflow: hidden;
+}
+
+.backdropImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 0.3s ease;
+}
+
+.previewIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  /* sin transform ni pointer-events:none — el iframe es completamente interactivo */
+}
+
+.previewGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10,10,20,0.95) 0%,
+    rgba(10,10,20,0.5) 55%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.previewInfo {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  z-index: 3;
+}
+
+.expandTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+.expandMeta {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.metaChip {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.starSmall { color: var(--accent-gold); font-size: 0.65rem; }
+
+/* ─── Botón Ver completa ─────────────────────────────────────────── */
+.watchBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 7px 14px;
+  background: var(--accent-red);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.03em;
+  transition: background 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+  pointer-events: all;
+  z-index: 10;
+  position: relative;
+}
+
+.watchBtn:hover {
+  background: #c0102a;
+  transform: scale(1.04);
+}
+
+/* ─── Synopsis ───────────────────────────────────────────────────── */
+.synopsis {
+  padding: 10px 12px 12px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  border-top: 1px solid var(--border-subtle);
+}

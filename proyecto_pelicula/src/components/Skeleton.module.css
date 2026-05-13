@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 0%,
+    var(--bg-surface) 40%,
+    var(--bg-card) 80%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.6s infinite linear;
+  border-radius: var(--radius-md);
+}
+
+.poster {
+  composes: shimmer;
+  aspect-ratio: 2/3;
+  border-radius: var(--radius-md);
+}
+
+.line {
+  composes: shimmer;
+  height: 14px;
+  border-radius: 4px;
+}

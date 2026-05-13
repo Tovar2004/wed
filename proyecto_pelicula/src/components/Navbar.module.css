@@ -1,0 +1,128 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 8, 16, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  width: 36px;
+  height: 36px;
+  background: var(--accent-red);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.link {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition), background var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.link:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass-hover);
+}
+
+.active {
+  color: var(--text-primary) !important;
+  background: var(--bg-glass-hover) !important;
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--accent-red);
+  border-radius: 1px;
+}
+
+/* ─── Botón Exclusivo ───────────────────────── */
+.exclusive {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  color: var(--text-primary) !important;
+  background: rgba(229, 9, 20, 0.08);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all var(--transition);
+}
+
+.exclusive:hover {
+  background: rgba(229, 9, 20, 0.18) !important;
+  border-color: rgba(229, 9, 20, 0.6) !important;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.2);
+}
+
+.exclusiveActive {
+  background: rgba(229, 9, 20, 0.2) !important;
+  border-color: #e50914 !important;
+  box-shadow: 0 0 16px rgba(229, 9, 20, 0.3);
+}
+
+.exclusiveActive::after { display: none; }
+
+.exclusiveN {
+  width: 18px;
+  height: 18px;
+  background: #e50914;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  flex-shrink: 0;
+}

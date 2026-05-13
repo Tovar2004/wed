@@ -1,0 +1,128 @@
+/* ─── Page layout ─────────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 3rem 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.heroSub {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* ─── Grid: tamaño ideal de cards ────────────────────────────── */
+/*
+  minmax(150px, 1fr) + max-width en el wrapper
+  produce cards de ~170–200px en desktop,
+  nunca más anchas de 220px.
+*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* ─── Toolbar ─────────────────────────────────────────────────── */
+.toolbar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Active filters ──────────────────────────────────────────── */
+.activeFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0.75rem 0;
+}
+
+.filterTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(232, 23, 58, 0.12);
+  border: 1px solid rgba(232, 23, 58, 0.25);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.filterTag:hover { background: rgba(232, 23, 58, 0.22); }
+
+.resultCount {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* ─── States ──────────────────────────────────────────────────── */
+.error {
+  color: var(--accent-red);
+  font-size: 0.88rem;
+  padding: 1rem 0;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero    { padding: 2rem 1rem 1rem; }
+  .container { padding: 0 1rem 3rem; }
+}
